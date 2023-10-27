@@ -20,6 +20,7 @@ body {
     aspect-ratio: 1;
     background-image: url(./images/bg.png);
     position: relative;
+    overflow: hidden;
 }
 
 .block {
@@ -32,11 +33,63 @@ body {
 .block-1 {
     top: 16rem;
     right: 44rem;
+    animation: block1Anim 5s infinite linear;
+    transform-origin: bottom right;
+}
+
+@keyframes block1Anim {
+    0% {
+        transform: translateY(-38rem) rotateZ(0);
+        opacity: .5;
+    }
+
+    30% {
+        transform: translateY(0) rotateZ(0);
+        opacity: .5;
+    }
+
+    40%,
+    45% {
+        transform: translateY(0) rotateZ(-180deg);
+        opacity: 1;
+    }
+
+    55%,
+    100% {
+        transform: translateY(38rem) rotateZ(-180deg);
+        opacity: .5;
+    }
 }
 
 .block-2 {
     top: 16rem;
     right: 8rem;
+    animation: block2Anim 5s 2.5s infinite linear;
+    transform-origin: bottom left;
+}
+
+@keyframes block2Anim {
+    0% {
+        transform: translateY(-38rem) rotateZ(0);
+        opacity: .5;
+    }
+
+    30% {
+        transform: translateY(0) rotateZ(0);
+        opacity: .5;
+    }
+
+    40%,
+    45% {
+        transform: translateY(0) rotateZ(180deg);
+        opacity: 1;
+    }
+
+    55%,
+    100% {
+        transform: translateY(38rem) rotateZ(180deg);
+        opacity: .5;
+    }
 }
 
 .ball {

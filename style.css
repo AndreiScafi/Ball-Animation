@@ -19,6 +19,9 @@ body {
     width: 70rem;
     aspect-ratio: 1;
     background-image: url(./images/bg.png);
+    background-size: auto 70rem;
+    background-repeat: no-repeat;
+    border: 1rem solid red;
     position: relative;
     overflow: hidden;
 }
@@ -64,7 +67,7 @@ body {
 .block-2 {
     top: 16rem;
     right: 8rem;
-    animation: block2Anim 5s 2.5s infinite linear;
+    animation: block2Anim 5s -2.5s infinite linear;
     transform-origin: bottom left;
 }
 
@@ -100,4 +103,27 @@ body {
     position: absolute;
     left: 29rem;
     top: 22rem;
+    animation: ballAnim 2.5s -1.5s infinite linear;
+}
+
+@keyframes ballAnim {
+    0% {
+        transform: translateY(-20rem) scale(.8, 1);
+    }
+
+    45% {
+        transform: translateY(0) scale(.9, 1);
+    }
+
+    50% {
+        transform: translateY(2rem) scale(1, .7);
+    }
+
+    60% {
+        transform: translateY(-10rem) scale(.9, 1);
+    }
+
+    100% {
+        transform: translateY(-20rem) scale(.8, 1);
+    }
 }

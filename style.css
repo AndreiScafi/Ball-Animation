@@ -20,10 +20,20 @@ body {
     aspect-ratio: 1;
     background-image: url(./images/bg.png);
     background-size: auto 70rem;
-    background-repeat: no-repeat;
-    border: 1rem solid red;
+    background-repeat: repeat-y;
     position: relative;
     overflow: hidden;
+    animation: bgAnim 5s infinite linear;
+}
+
+@keyframes bgAnim {
+    0% {
+        background-position: center 0;
+    }
+
+    100% {
+        background-position: center 70rem;
+    }
 }
 
 .block {
@@ -31,6 +41,7 @@ body {
     aspect-ratio: 1;
     background-color: rgb(51, 184, 184);
     position: absolute;
+    box-shadow: .2rem .2rem .4rem #aaa inset, -.2rem -.2rem .4rem #aaa inset;
 }
 
 .block-1 {
